@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-namespace FintachartsApi.Models
+namespace MagniseTestTaskFintacharts.Models
 {
     public class Instrument
     {

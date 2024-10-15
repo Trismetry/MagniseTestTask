@@ -1,4 +1,4 @@
-﻿using FintachartsApi.Models;
+﻿using MagniseTestTaskFintacharts.Models;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
@@ -8,7 +8,7 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
 
-namespace FintachartsApi.Web
+namespace MagniseTestTaskFintacharts.Web
 {
     public class GetInstruments
     {

@@ -1,6 +1,6 @@
-﻿using FintachartsApi.Database;
-using FintachartsApi.Models;
-using FintachartsApi.Web;
+﻿using MagniseTestTaskFintacharts.Database;
+using MagniseTestTaskFintacharts.Models;
+using MagniseTestTaskFintacharts.Web;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -9,7 +9,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace FintachartsApi.Controllers
+namespace MagniseTestTaskFintacharts.Controllers
 {
     [ApiController]
     [Route("[controller]")]
@@ -30,7 +30,7 @@ namespace FintachartsApi.Controllers
             try
             {
                 List<InstrumentValuesTimely> response = await _getHistoricalData.GetDateRangeAsync(guid, start, end);
-                if(response == null)
+                if (response == null)
                 {
                     throw new Exception("Request returned no data");
                 }

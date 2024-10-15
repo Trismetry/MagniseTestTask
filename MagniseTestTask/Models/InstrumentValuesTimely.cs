@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace FintachartsApi.Models
+namespace MagniseTestTaskFintacharts.Models
 {
     public class Root
     {

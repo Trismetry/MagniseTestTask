@@ -1,4 +1,4 @@
-﻿using FintachartsApi.Models;
+﻿using MagniseTestTaskFintacharts.Models;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
@@ -9,7 +9,7 @@ using System.Reflection.Metadata;
 using System.Text.Json;
 using System.Threading.Tasks;
 
-namespace FintachartsApi.Web
+namespace MagniseTestTaskFintacharts.Web
 {
     public class GetHistoricalData
     {

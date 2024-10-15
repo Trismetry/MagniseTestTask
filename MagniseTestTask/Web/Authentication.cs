@@ -9,7 +9,7 @@ using System.Text.Json;
 using System.Threading.Tasks;
 using System.Timers;
 
-namespace FintachartsApi.Web
+namespace MagniseTestTaskFintacharts.Web
 {
     public class Authentication
     {

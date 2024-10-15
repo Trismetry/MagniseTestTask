@@ -1,25 +1,25 @@
-#See https://aka.ms/customizecontainer to learn how to customize your debug container and how Visual Studio uses this Dockerfile to build your images for faster debugging.
 
-FROM mcr.microsoft.com/dotnet/aspnet:5.0 AS base
-USER app
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
+USER $APP_UID
 WORKDIR /app
 EXPOSE 8080
 EXPOSE 8081
+ENV ASPNETCORE_ENVIRONMENT=Development 
 
-FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
-COPY ["FintachartsApi/FintachartsApi.csproj", "FintachartsApi/"]
-RUN dotnet restore "./FintachartsApi/FintachartsApi.csproj"
+COPY ["MagniseTestTask/MagniseTestTaskFintacharts.csproj", "MagniseTestTask/"]
+RUN dotnet restore "./MagniseTestTask/MagniseTestTaskFintacharts.csproj"
 COPY . .
-WORKDIR "/src/FintachartsApi"
-RUN dotnet build "./FintachartsApi.csproj" -c $BUILD_CONFIGURATION -o /app/build
+WORKDIR "/src/MagniseTestTask"
+RUN dotnet build "./MagniseTestTaskFintacharts.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
 FROM build AS publish
 ARG BUILD_CONFIGURATION=Release
-RUN dotnet publish "./FintachartsApi.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
+RUN dotnet publish "./MagniseTestTaskFintacharts.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
 
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "FintachartsApi.dll"]
+ENTRYPOINT ["dotnet", "MagniseTestTaskFintacharts.dll"]

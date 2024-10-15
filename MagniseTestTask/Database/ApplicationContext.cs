@@ -1,8 +1,8 @@
-﻿using FintachartsApi.Models;
+﻿using MagniseTestTaskFintacharts.Models;
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace FintachartsApi.Database
+namespace MagniseTestTaskFintacharts.Database
 {
     public class ApplicationContext : DbContext
     {

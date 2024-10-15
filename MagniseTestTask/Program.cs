@@ -1,12 +1,12 @@
-using FintachartsApi.Database;
-using FintachartsApi.Web;
+using MagniseTestTaskFintacharts.Database;
+using MagniseTestTaskFintacharts.Web;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Hosting;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 
 
-namespace FintachartsApi
+namespace MagniseTestTaskFintacharts
 {
     public class Program
     {

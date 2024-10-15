@@ -1,17 +1,17 @@
-version: "3.9"  # optional since v1.27.0
+version: "3.9"  
 services:
   web_api:
-    image: "trismetry/fintacharts"
-    container_name: FintachartsApi
+    image: "magnisetesttaskfintacharts"
+    container_name: MagniseTestTaskFintacharts
     ports:
       - "5000:8080"
     depends_on: 
       - sql
   sql:
     image: "mcr.microsoft.com/mssql/server:2022-latest"
-    container_name: ILLYA
-    ports: # same net
+    container_name: sql1
+    ports: 
       - "1433:1433" 
     environment:
       - ACCEPT_EULA=y
-      - MSSQL_SA_PASSWORD=12345
+      - MSSQL_SA_PASSWORD=12345Abc

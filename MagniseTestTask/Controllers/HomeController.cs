@@ -1,5 +1,5 @@
-﻿using FintachartsApi.Database;
-using FintachartsApi.Web;
+﻿using MagniseTestTaskFintacharts.Database;
+using MagniseTestTaskFintacharts.Web;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -8,7 +8,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace FintachartsApi.Controllers
+namespace MagniseTestTaskFintacharts.Controllers
 {
     [ApiController]
     [Route("[controller]/[action]")]

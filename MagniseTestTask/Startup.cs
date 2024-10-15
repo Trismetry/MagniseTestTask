@@ -4,11 +4,11 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using Microsoft.OpenApi.Models;
-using FintachartsApi.Web;
+using MagniseTestTaskFintacharts.Web;
 using Microsoft.EntityFrameworkCore;
-using FintachartsApi.Database;
+using MagniseTestTaskFintacharts.Database;
 
-namespace FintachartsApi
+namespace MagniseTestTaskFintacharts
 {
     public class Startup
     {
@@ -44,10 +44,7 @@ namespace FintachartsApi
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "FintachartsApi", Version = "v1" });
             });
 
-            // var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
-            // var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
-            //c.IncludeXmlComments(xmlPath);
-        
+           
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

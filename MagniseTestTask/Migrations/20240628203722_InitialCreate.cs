@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace FintachartsApi.Migrations
+namespace MagniseTestTaskFintacharts.Migrations
 {
     /// <inheritdoc />
     public partial class InitialCreate : Migration
